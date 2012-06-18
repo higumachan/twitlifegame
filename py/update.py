@@ -7,11 +7,12 @@ from settings import *
 def _main():
     conn = pymongo.Connection(DB_HOST);
     db = conn.lifegame;
-    field = Field(db.field.sort("_id", -1).limit(1)[0], db);
+
+    field = Field(db.fields.find().sort("_id", -1).limit(1)[0]["field"], db);
 
     while (1):
         field.update();
-        field.append_user(db);
+        field.append_users(db);
         field.save(db);
         time.sleep(1);
 
