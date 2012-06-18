@@ -6,11 +6,22 @@
 	<script src="{{ url_for('static', filename='js/kinetic.js') }}" type="text/javascript"></script>
 	<script src="{{ url_for('static', filename='js/jquery.js') }}" type="text/javascript"></script>
 	<script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename='js/flotr2.min.js') }}" type="text/javascript"></script>
 	<script type="text/javascript">
 		id = {{id}}
 	</script>
 </head>
 <body>
 	<div id="container"></div>
+	<div id="info">
+		<p id="name"></p>
+		<p id="atk"></p>
+		<p id="dif"></p>
+		<p id="spd"></p>
+		<p id="brd"></p>
+		<p id="rep"></p>
+		<div id="reader" style="width:100px;height:100px;">
+		</div>
+	</div>
 </body>
 </html>
